@@ -3,11 +3,11 @@
 
     <head>
 
+        {% load static %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {% load static %}
-
         <title>{% block title %}{%endblock%} | Jeremias Caceres</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
         <!-- Estilos y fuentes del template  -->
 
@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-                {% block headers %}{% endblock %} {% comment %} BLOQUE QUE SE INJECTA DE FORMA DIMANICA EN LA CABECERA O HEADER DE LA PAGINA {% endcomment %}
+                {% block headers %}{% endblock %}
             </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
     <!-- CONTENIDO -->
 
     <div class="container"> 
-            {% block content %} {% endblock %}
+        {% block content %} {% endblock %}
     </div>
 
     {% if request.path != '/' %}
